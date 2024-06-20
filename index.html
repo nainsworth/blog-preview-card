@@ -46,12 +46,41 @@
       }
 
       body {
-        background-color: var(--light-gray);
+        background-color: var(--yellow);
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
+      }
+
+      .card {
+        width: 384px;
+        height: 522px;
+        background-color: var(--white);
+        border-radius: 20px;
+        border: 1px solid var(--black);
+        box-shadow: 8px 8px var(--black);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .blog-img {
+        border-radius: 10px;
+        /* width: 336px; */
+      }
+
+      .author {
+        align-self: start;
+        display: flex;
+        align-items: center;
+      }
+
+      .author-img {
+        /* width: 32px;
+        height: 32px; */
       }
 
       .attribution {
@@ -66,13 +95,29 @@
     </style>
   </head>
   <body>
-    Learning Published 21 Dec 2023 HTML & CSS foundations These languages are
-    the backbone of every website, defining structure, content, and
-    presentation. Greg Hooper
+    <div class="card">
+      <img
+        class="blog-img"
+        src="./assets/images/illustration-article.svg"
+        alt="Blog Image"
+      />
+      <div class="content">
+        Learning Published 21 Dec 2023 HTML & CSS foundations These languages
+        are the backbone of every website, defining structure, content, and
+        presentation.
+      </div>
+      <div class="author">
+        <img src="./assets/images/image-avatar.webp" alt="Author Image" />
+        <p>Greg Hooper</p>
+      </div>
+    </div>
 
     <div class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      <a
+        class="author-img"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Nicholas Ainsworth</a>.
     </div>
