@@ -37,6 +37,10 @@
         padding: 0;
         box-sizing: border-box;
         font-family: var(--font-outfit);
+        /* font-size: clamp(.5rem 2rem 2rem); */
+      }
+
+      p {
         font-size: var(--font-size);
       }
 
@@ -54,22 +58,37 @@
       }
 
       .card {
-        width: 384px;
-        height: 522px;
+        max-width: 384px;
         background-color: var(--white);
         border-radius: 20px;
         border: 1px solid var(--black);
         box-shadow: 8px 8px var(--black);
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
         padding: 24px;
+        gap: 24px;
       }
 
       .blog-img {
         border-radius: 10px;
-        /* width: 336px; */
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 12px;
+      }
+      .category {
+        background-color: var(--yellow);
+        font-weight: var(--font-bold);
+        padding: 8px 12px;
+        border-radius: 4px;
+      }
+
+      .title:hover {
+        color: var(--yellow);
+        cursor: pointer;
       }
 
       .author-container {
@@ -79,8 +98,13 @@
         gap: 12px;
       }
 
+      .description {
+        color: var(--gray);
+        line-height: 1.5;
+      }
+
       .author-img {
-        width: 32px;
+        max-width: 32px;
         height: 32px;
       }
 
@@ -109,7 +133,7 @@
       <div class="content">
         <p class="category">Learning</p>
         <p class="publish-date">Published 21 Dec 2023</p>
-        <p class="title">HTML & CSS foundations</p>
+        <h2 class="title">HTML & CSS foundations</h2>
         <p class="description">
           These languages are the backbone of every website, defining structure,
           content, and presentation.
